@@ -1,0 +1,90 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DevTest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- styles -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/demo.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <!-- Add IntroJs styles -->
+    <link href="introjs.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style type="text/css">
+    .well {
+      border: 1px solid grey;
+    }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right" data-step="5" data-intro="Your dashboard, your personal space!">
+          <li><a href="#"><i class="fa fa-level-up"></i> Levels</a></li>
+          <li><a href="#"><i class="fa fa-share-square-o"></i> Submissions</a></li>
+          <li> <button type="button" class="btn btn-md btn-primary" data-toggle="popover" title="Levels cleared: 0" data-placement="bottom" data-content="General Informaton about the candidate. Gets updated from back end as achievements are unlocked.">My Profile</button>
+          </li>
+        </ul>
+      </div>
+      <br/>
+      <hr/>
+
+      <div class="well jumbotron container-fluid">
+        <h1 src="home-bg.jpg" data-step="6" data-intro="Your one-stop guide in becoming a better developer!" >DevTest</h1>
+        <p class="lead" data-step="1" data-intro="Welcome! Let's get started.">Welcome to DevTest. Let us walk you through our main features to give you a peek at what exactly we have in store for you.</p>
+        <a class="btn btn-large btn-success" href="javascript:void(0);" onclick="javascript:introJs().setOption('showProgress', true).start();">Get Started</a>
+        <a class="btn btn-large btn-primary" datat-step="7" data-intro="Continue to levels" href="javascript:void(0);" onclick="javascript:introJs().setOption('showProgress', true).start();">Continue</a>
+      </div>
+
+      <hr>
+
+      <div class="row-fluid marketing">
+        <div class="span6 well" data-step="2" data-intro="First Feature." data-position='right'>
+          <h4>Feature One</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis augue a neque cursus ac blandit orci faucibus. Phasellus nec metus purus.</p>
+          </div>
+          
+          <div class="span6 well" data-step="3" data-intro="Second Feature." data-position='right'>
+          <h4>Feature Two</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis augue a neque cursus ac blandit orci faucibus. Phasellus nec metus purus.</p>
+          </div>
+
+        <div class="span11 well" data-step="4" data-intro="Third great feature"  data-position='left'>
+          <h4>Big Feature three</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis augue a neque cursus ac blandit orci faucibus. Phasellus nec metus purus.</p>
+          
+          <h4>Section Five</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis augue a neque cursus ac blandit orci faucibus. Phasellus nec metus purus.</p>
+
+          <h4>Section Six</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis augue a neque cursus ac blandit orci faucibus. Phasellus nec metus purus.</p>
+
+        </div>
+      </div>
+
+      <hr>
+      
+
+    </div>
+    <script type="text/javascript" src="intro.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+      });
+
+      $('[data-toggle="popover"]').popover({
+    container: 'body'
+});
+    </script>
+
+  </body>
+  </html>
