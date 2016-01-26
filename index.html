@@ -18,46 +18,56 @@
     <style type="text/css">
     .well {
       border: 1px solid grey;
+      border-radius: 5px;
+    }
+    .span6 {
+      background-color:#e3e3e3;
+    }
+    .span11{
+      background-color:#e3e3e3; 
+    }
+    .introbox{
+      background-color :#f5f5f5;
     }
     </style>
   </head>
 
   <body>
 
-    <div class="container-narrow">
+    <div class="container-narrow" >
 
       <div class="masthead">
-        <ul class="nav nav-pills pull-right" data-step="5" data-intro="Your dashboard, your personal space!">
+        <ul class="nav nav-pills pull-right" data-step="5" data-intro="Your dashboard, your personal space!" >
           <li><a href="#"><i class="fa fa-level-up"></i> Levels</a></li>
           <li><a href="#"><i class="fa fa-share-square-o"></i> Submissions</a></li>
-          <li> <button type="button" class="btn btn-md btn-primary" data-toggle="popover" title="Levels cleared: 0" data-placement="bottom" data-content="General Informaton about the candidate. Gets updated from back end as achievements are unlocked.">My Profile</button>
+          <li> <a   data-toggle="popover" title="Levels cleared: 0" data-placement="bottom" data-content="General Informaton about the candidate. Gets updated from back end as achievements are unlocked."><i class="fa fa-user"></i></a>
           </li>
         </ul>
       </div>
       <br/>
       <hr/>
 
-      <div class="well jumbotron container-fluid">
-        <h1 src="home-bg.jpg" data-step="6" data-intro="Your one-stop guide in becoming a better developer!" >DevTest</h1>
+      <div class="well jumbotron container-fluid introbox" >
+        <h1 src="home-bg.jpg" data-step="6" data-intro="Your one-stop guide in becoming a better developer!" data-hint="Click on get started to begin tour or continue to skip it." data-hintPosition="bottom-middle" data-position="bottom-right-aligned" >DevTest</h1>
         <p class="lead" data-step="1" data-intro="Welcome! Let's get started.">Welcome to DevTest. Let us walk you through our main features to give you a peek at what exactly we have in store for you.</p>
-        <a class="btn btn-large btn-success" href="javascript:void(0);" onclick="javascript:introJs().setOption('showProgress', true).start();">Get Started</a>
-        <a class="btn btn-large btn-primary" datat-step="7" data-intro="Continue to levels" href="javascript:void(0);" onclick="javascript:introJs().setOption('showProgress', true).start();">Continue</a>
+        <a class="btn btn-large btn-success" href="javascript:void(0);" onclick="javascript:introJs().setOption('showProgress', true).start();" >Get Started</a>
+        <a class="btn btn-large btn-primary" datat-step="7" data-intro="Continue to levels" href="#">Continue</a>
       </div>
 
       <hr>
 
       <div class="row-fluid marketing">
-        <div class="span6 well" data-step="2" data-intro="First Feature." data-position='right'>
+        <div class="span6 well" data-step="2" data-intro="First Feature." data-position='top'>
           <h4>Feature One</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis augue a neque cursus ac blandit orci faucibus. Phasellus nec metus purus.</p>
           </div>
           
-          <div class="span6 well" data-step="3" data-intro="Second Feature." data-position='right'>
+          <div class="span6 well" data-step="3" data-intro="Second Feature." data-position='top'>
           <h4>Feature Two</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis augue a neque cursus ac blandit orci faucibus. Phasellus nec metus purus.</p>
           </div>
 
-        <div class="span11 well" data-step="4" data-intro="Third great feature"  data-position='left'>
+        <div class="span11 well" data-step="4" data-intro="Third great feature"  data-position='top'>
           <h4>Big Feature three</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis augue a neque cursus ac blandit orci faucibus. Phasellus nec metus purus.</p>
           
@@ -69,7 +79,6 @@
 
         </div>
       </div>
-
       <hr>
       
 
@@ -84,6 +93,10 @@
       $('[data-toggle="popover"]').popover({
     container: 'body'
 });
+
+      window.onload = function() {
+  javascript:introJs().addHints();
+};
     </script>
 
   </body>
